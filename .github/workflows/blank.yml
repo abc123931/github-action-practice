@@ -13,3 +13,7 @@ jobs:
       run: |
         cd ci
         docker-compose up -d
+  test:
+    steps:
+    - name: test
+      run: echo testdayo
