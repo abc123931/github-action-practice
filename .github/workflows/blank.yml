@@ -1,9 +1,13 @@
 name: CI
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+    - master
+  pull_request:
 
 jobs:
-  build:
+  test:
 
     runs-on: ubuntu-latest
 
@@ -13,7 +17,3 @@ jobs:
       run: |
         cd ci
         docker-compose up -d
-  test:
-    steps:
-    - name: test
-      run: echo testdayo
